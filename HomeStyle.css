@@ -1,0 +1,78 @@
+.sub-title {
+  display: flex;
+  justify-content: center;
+}
+
+.rule {
+  width: 50%;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+  margin: 5%;
+  color: #fef2bf;
+  line-height: 2;
+  border: 2px solid #cdcd;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 5px;
+  text-shadow: 1px 1px 2px rgb(31, 28, 28), 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.rule2 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1rem;
+  margin: 5%;
+  color: #fef2bf;
+  line-height: 2;
+  text-align: left;
+}
+
+video {
+  width: 100%;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+}
+a {
+  flex-basis: 40%;
+  display: block;
+  font-family: "Press Start 2P", cursive;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 20px;
+  background-color: #011f3f;
+  font-size: 25px;
+  border-style: none;
+  animation: shineGlow 3s infinite alternate;
+  color: wheat;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #fef2bf;
+  color: black;
+}
+
+@keyframes shineGlow {
+  0% {
+    box-shadow: 0 0 5px #fef2bf;
+  }
+
+  50% {
+    box-shadow: 0 0 20px #fef2bf, 0 0 30px #fef2bf;
+  }
+  100% {
+    box-shadow: 0 0 5px #fef2bf;
+  }
+}
+
+@media (max-width: 600px) {
+  .rule {
+    width: 40%;
+    font-size: 1rem;
+  }
+  a {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

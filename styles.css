@@ -1,0 +1,149 @@
+body {
+  text-align: center;
+  background-color: #011f3f;
+  overflow-x: hidden;
+}
+
+#level-title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  margin: 5%;
+  color: #fef2bf;
+  line-height: 2;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform: translateY(10%);
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, minmax(100px, 1fr));
+  grid-gap: 60px;
+  width: 60%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.btn {
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.boxEffect {
+  border-style: none;
+  background-color: #011f3f;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.ready {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ready a {
+  font-family: "Press Start 2P", cursive;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 20px;
+  background-color: #011f3f;
+  font-size: 25px;
+  border-style: none;
+  animation: shineGlow 3s infinite alternate;
+  color: wheat;
+  text-decoration: none;
+  transform: translateY(150px);
+  flex-basis: 40px;
+}
+
+a:hover {
+  background-color: #fef2bf;
+  color: black;
+}
+
+@keyframes shineGlow {
+  0% {
+    box-shadow: 0 0 5px #fef2bf;
+  }
+
+  50% {
+    box-shadow: 0 0 20px #fef2bf, 0 0 30px #fef2bf;
+  }
+  100% {
+    box-shadow: 0 0 5px #fef2bf;
+  }
+}
+
+@media (max-width: 900px) {
+  .box {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .box {
+    width: 90%;
+  }
+  #level-title {
+    font-size: 2rem;
+  }
+
+  .btn {
+    width: 160px;
+    height: 160px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 490px) {
+  .box {
+    width: 90%;
+  }
+
+  #level-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 130px;
+    height: 130px;
+    margin-top: 50px;
+  }
+}
