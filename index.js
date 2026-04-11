@@ -24,8 +24,7 @@ let level = 0;
 let speed = 500;
 
 function startGame() {
-  if (level === 10) {
-    console.log("complexity is done");
+  if (level === 9) {
     // Make userClickedButton is empty at the beginning
     userClickedPattern.length = 0;
     //increment level
@@ -62,7 +61,6 @@ function startGame() {
     // play the colour sound
     playSound(randomChosenColour);
   }
-  console.log(gamePattern);
 }
 
 // Start game will be by clicking on ready button
@@ -83,7 +81,7 @@ $(".btn").click(function () {
   // play the sound
   playSound(userChosenColour);
   // if length is 1 so, it will check index 0 , if length =2 , index=1
-  /* becauser we reset userClickedPattern every sequence , so every index will be checked
+  /* because we reset userClickedPattern every sequence , so every index will be checked
   with index of gamePattern that is already store the right pattern */
   checkAnswer(userClickedPattern.length - 1);
 });
